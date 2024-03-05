@@ -1,0 +1,169 @@
+﻿.bg {
+    baground-image: url('../img/th.jpg');
+    baground-repeat: no-repeat;
+    baground-size: cover;
+    height: 100vh;
+}
+
+.container-form {
+    border .1px solid #A52A2A;
+    margin-top: 25vh;
+    padding: 30px 40px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 70px -9px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 70px -9px rgba(255,255,255,1);
+    box-shadow: 0px 0px 70px -9px rgba(255,255,255,1);
+}
+
+/* The Modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto; /* 10% from the top and centered horizontally */
+    border: 1px solid #888;
+    max-width: 600px; /* Maximum width of the modal */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+/* Modal Header */
+.modal-header {
+    padding: 10px 20px;
+    background-color: #ffd800; /* Header color */
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 50% !important;
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 20px;
+}
+
+/* Modal Footer */
+.modal-footer {
+    padding: 10px 20px;
+    background-color: #f2f2f2; /* Footer color */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Close Button inside Header */
+.close-modal {
+    color: white;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+    .close-modal:hover,
+    .close-modal:focus {
+        color: #ccc;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+/*gridview style*/
+.template-field {
+    width: auto;
+}
+
+.btn-detail {
+    background-color: #FF9933;
+    border-color: #FF9933;
+}
+
+    .btn-detail:hover {
+        background-color: #CC6600;
+        border-color: #CC6600;
+    }
+
+.btn-edit {
+    background-color: #00CC66;
+    border-color: #00CC66;
+}
+
+    .btn-edit:hover {
+        background-color: #006633;
+        border-color: #006633;
+    }
+/* Style the GridView as a table */
+.gridview-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+    /* Style table headers */
+    .gridview-table th {
+        background-color: #f2f2f2;
+        border: 1px solid #dddddd;
+        padding: 8px;
+        text-align: left;
+    }
+
+    /* Style table rows */
+    .gridview-table tr {
+        border: 1px solid #dddddd;
+    }
+
+        /* Style alternate row colors */
+        .gridview-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+    /* Style table cells */
+    .gridview-table td {
+        border: 1px solid #dddddd;
+        padding: 8px;
+    }
+
+
+/*modal*/
+.modalBackground {
+    background-color: #000;
+    opacity: 0.7;
+    filter: alpha(opacity=70); /* For IE8 and earlier */
+    position: center;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 80%;
+    z-index: 10000;
+}
+/*modal and popup*/
+/* Styling for the ASP.NET Panel */
+.myPanel {
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 80%;
+    overflow-y: scroll;
+}

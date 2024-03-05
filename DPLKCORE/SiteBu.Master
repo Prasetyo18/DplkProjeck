@@ -1,0 +1,274 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteBu.Master.cs" Inherits="DPLKCORE.SiteBu"  %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"
+  class="light-style layout-menu-fixed"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="Styles/assets/"
+  data-template="vertical-menu-template-free">
+<head>
+    <script src="<%=ResolveUrl("Styles/assets/vendor/libs/jquery/jquery.js") %>" type="text/javascript"></script>
+    <script src="<%=ResolveUrl("Styles/assets/vendor/libs/popper/popper.js") %>" type="text/javascript"></script>
+    <script src="<%=ResolveUrl("Styles/assets/vendor/js/bootstrap.js") %>" type="text/javascript"></script>
+    <script src="<%=ResolveUrl("Styles/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js") %>" type="text/javascript"></script>
+    <script src="<%=ResolveUrl("Styles/assets/vendor/js/menu.js") %>" type="text/javascript"></script>
+    <script src="<%=ResolveUrl("Styles/assets/vendor/libs/apex-charts/apexcharts.js") %>" type="text/javascript"></script>
+    <script src="<%=ResolveUrl("Styles/assets/js/main.js") %>" type="text/javascript"></script>
+    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="<%=ResolveUrl("Styles/assets/js/dashboards-analytics.js") %>" type="text/javascript"></script>
+    <!-- GitHub buttons.js -->
+    <script type="text/javascript" src="https://buttons.github.io/buttons.js"></script>
+
+    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"  />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>DPLK | Perta Life Insurance</title>
+    <meta name="description" content="" />
+      
+    <link rel="icon" href="~/images/perta.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" />
+    <link rel="stylesheet" href="Styles/assets/vendor/fonts/boxicons.css" />
+    <link rel="stylesheet" href="Styles/assets/vendor/css/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="Styles/assets/vendor/css/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="Styles/assets/css/demo.css" />
+    <link rel="stylesheet" href="Styles/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="Styles/assets/vendor/libs/apex-charts/apex-charts.css" />
+
+    <style type="text/css">
+        .nav navbar-nav {
+            width: 100%;
+            padding-left: 15px;
+        }
+        .sidebar-nav {
+            padding: 9px 0;
+        }
+        body{
+            font-family: Roboto;
+        }
+       
+        .card {
+            background: #fff;
+            min-height: 50px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            position: relative;
+            margin-bottom: 30px;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            -ms-border-radius: 2px;
+            border-radius: 2px;
+        }
+        .card .header {
+            color: #555;
+            padding: 20px;
+            position: relative;
+            border-bottom: 1px solid rgba(204, 204, 204, 0.35); 
+        }
+        .card .header h2 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: normal;
+            color: #111; 
+        }
+        .card .header h2 small {
+            display: block;
+            font-size: 12px;
+            margin-top: 5px;
+            color: #999;
+            line-height: 15px; 
+        }
+        .card .header h2 small a {
+            font-weight: bold;
+            color: #777; 
+        }
+        .card .header .col-xs-12 h2 {
+            margin-top: 5px; 
+        }
+        .card .body {
+            font-size: 14px;
+            color: #555;
+            padding: 20px; 
+        }
+        .aligncenter{
+            align-content:center;
+        }
+    </style>
+
+    <script type="text/javascript">
+        var jq = jQuery.noConflict();
+        jq(window).load(function () {
+            jq(".se-pre-con").fadeOut("slow");;
+        });
+    </script>
+
+    <script type="text/javascript">
+        function openModal() {
+            document.getElementById('myModal').style.display = "block";
+        }
+        function closeModal() {
+            document.getElementById('myModal').style.display = "none";
+        }
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+
+        jq(document).ready(function () {
+            // Initialize tooltips
+            jq('.nav-tabs > li a[title]').tooltip();
+
+            // Wizard
+            jq('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
+                var $target = jq(e.target);
+                if ($target.parent().hasClass('disabled')) {
+                    return false;
+                }
+            });
+
+            jq(".next-step").click(function (e) {
+                var $active = jq('.wizard .nav-tabs li.active');
+                $active.next().removeClass('disabled');
+                nextTab($active);
+            });
+
+            jq(".prev-step").click(function (e) {
+                var $active = jq('.wizard .nav-tabs li.active');
+                prevTab($active);
+            });
+        });
+
+        $(document).ready(function () {
+            // Initialize tooltips
+            $('.nav-tabs > li a[title]').tooltip();
+
+            // Wizard
+            $('a[data-toggle="tab"]').on('show.bs.tab', function (e) {
+                var $target = $(e.target);
+                if ($target.parent().hasClass('disabled')) {
+                    return false;
+                }
+            });
+
+            $(".next-step").click(function (e) {
+                var $active = $('.wizard .nav-tabs li.active');
+                $active.next().removeClass('disabled');
+                nextTab($active);
+            });
+
+            $(".prev-step").click(function (e) {
+                var $active = $('.wizard .nav-tabs li.active');
+                prevTab($active);
+            });
+        });
+        function nextTab(elem) {
+            $(elem).next().find('a[data-toggle="tab"]').click();
+        }
+        function prevTab(elem) {
+            $(elem).prev().find('a[data-toggle="tab"]').click();
+        }
+    </script>
+
+    <script type="text/javascript">
+        var jq = jQuery.noConflict();
+        jq(window).load(function () {
+            jq(".se-pre-con").fadeOut("slow");;
+        });
+    </script>
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+<body>
+    <form runat="server">
+        <div class="container">
+            <div>
+                <table>
+                    <tr>
+                        <td>
+                            <asp:Image ImageUrl="~/Images/tugu.png" runat="server" width="90" height="90" />
+                        </td>
+                        <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                        <td>
+                            <asp:Image ID="Image1" ImageUrl="~/Images/banner.png" Width="45%" runat="server" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <br />
+        </div>
+
+        <div class="menu-inner-shadow"></div>
+        <ul class="menu-inner py-1">
+            <li class="menu-item">
+                <a href="javascript:void(0);" class="menu-link menu-toggle">
+                    <i class="menu-icon tf-icons bx bx-layout"></i>
+                    <div data-i18n="Pension">Pension</div>
+                </a>
+                <%--<form runat="server">--%>
+                    <div class="col-md-11">
+                        <asp:Menu ID="NavigationMenu" runat="server" EnableViewState="false"
+                            IncludeStyleBlock="false" Orientation="Horizontal"
+                            CssClass="navbar navbar-default container-fluid"
+                            StaticMenuStyle-CssClass="nav navbar-nav"
+                            StaticSelectedStyle-CssClass="active"
+                            DynamicMenuStyle-CssClass="dropdown-menu">
+                            <DynamicMenuStyle CssClass="dropdown-menu"></DynamicMenuStyle>
+                            <Items></Items>
+                            <StaticMenuStyle CssClass="nav navbar-nav"></StaticMenuStyle>
+                            <StaticSelectedStyle CssClass="active"></StaticSelectedStyle>
+                        </asp:Menu>
+                    </div>
+                    <div class="col-md-1" align="right">
+                        <asp:ImageButton ID="imgbtnLogout" runat="server" Width="48px" Height="48px" ImageUrl="~/Images/Button/Logout 48.png"
+                            CausesValidation="false" ToolTip="Logout" />
+                    </div>
+
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+               <%-- </form>--%>
+            </li>
+        </ul>
+
+        <div>
+            <center>
+                <div style="font-family: Roboto">
+                    Nama : <b><asp:Label ID="lblUsername" runat="server" Text="Label"></asp:Label></b> |
+                    Bagian : <b><asp:Label ID="lblUnitKerja" runat="server" Text="Label"></asp:Label> </b> |
+                    Nama PC : <b><asp:Label ID="lblCompName" runat="server" Text="Label"></asp:Label></b> |
+                    Tanggal : <b><asp:Label ID="lblTanggal" runat="server" Text="Label"></asp:Label> </b>|
+                </div>
+            </center>
+            <br />
+        </div>
+    </form>
+</body>
+</html>
+
+
+
+
+                       

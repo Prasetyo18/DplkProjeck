@@ -1,0 +1,1586 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3ED2FBF7-15EB-4F8E-9A61-66CDDDBCE7BD}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DPLKCORE</RootNamespace>
+    <AssemblyName>DPLKCORE</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <LangVersion>default</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>AllFilesInTheProject</FilesToIncludeForPublish>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.7.123, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>\\repository\DataCode\SiKa\Sika\bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\CrystalDecisions.CrystalReports.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportAppServer.Controllers, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\CrystalDecisions.ReportAppServer.Controllers.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\CrystalDecisions.ReportAppServer.DataDefModel.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ObjectFactory, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.Prompting, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\CrystalDecisions.ReportAppServer.Prompting.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.XmlSerialize, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Elmah">
+      <HintPath>E:\IndividualLife\IndividualLife\bin\Elmah.dll</HintPath>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>\\repository\DataCode\SiKa\Sika\bin\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.5.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.5.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>\\repository\DataCode\IndividualLife\IndividualLife\bin\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MSCaptcha">
+      <HintPath>..\..\..\temp\PLife\InkasoAskum\bin\MSCaptcha.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\new asper\bin\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\AsperOnline\IndividualLife\bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp, Version=1.50.4000.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>\\repository\DataCode\IndividualLife\IndividualLife\bin\PdfSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PdfSharp.Charting, Version=1.50.4000.0, Culture=neutral, PublicKeyToken=f94615aa0424f9eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>\\repository\DataCode\IndividualLife\IndividualLife\bin\PdfSharp.Charting.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp">
+      <HintPath>..\..\new asper\bin\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="additional-file\css\global.css" />
+    <Content Include="additional-file\img\02.jpg" />
+    <Content Include="additional-file\img\80.jpg" />
+    <Content Include="additional-file\img\bag.jpg" />
+    <Content Include="additional-file\img\tugu.png" />
+    <Content Include="App_Readme\Elmah.txt" />
+    <Content Include="assets\css\demo.css" />
+    <Content Include="assets\img\avatars\1.png" />
+    <Content Include="assets\img\avatars\3x4.jpg" />
+    <Content Include="assets\img\avatars\5.png" />
+    <Content Include="assets\img\avatars\6.png" />
+    <Content Include="assets\img\avatars\7.png" />
+    <Content Include="assets\img\backgrounds\18.jpg" />
+    <Content Include="assets\img\elements\1.jpg" />
+    <Content Include="assets\img\elements\11.jpg" />
+    <Content Include="assets\img\elements\12.jpg" />
+    <Content Include="assets\img\elements\13.jpg" />
+    <Content Include="assets\img\elements\17.jpg" />
+    <Content Include="assets\img\elements\18.jpg" />
+    <Content Include="assets\img\elements\19.jpg" />
+    <Content Include="assets\img\elements\2.jpg" />
+    <Content Include="assets\img\elements\20.jpg" />
+    <Content Include="assets\img\elements\3.jpg" />
+    <Content Include="assets\img\elements\4.jpg" />
+    <Content Include="assets\img\elements\5.jpg" />
+    <Content Include="assets\img\elements\7.jpg" />
+    <Content Include="assets\img\favicon\favicon.ico" />
+    <Content Include="assets\img\icons\brands\asana.png" />
+    <Content Include="assets\img\icons\brands\behance.png" />
+    <Content Include="assets\img\icons\brands\dribbble.png" />
+    <Content Include="assets\img\icons\brands\facebook.png" />
+    <Content Include="assets\img\icons\brands\github.png" />
+    <Content Include="assets\img\icons\brands\google.png" />
+    <Content Include="assets\img\icons\brands\instagram.png" />
+    <Content Include="assets\img\icons\brands\mailchimp.png" />
+    <Content Include="assets\img\icons\brands\slack.png" />
+    <Content Include="assets\img\icons\brands\twitter.png" />
+    <Content Include="assets\img\icons\unicons\cc-primary.png" />
+    <Content Include="assets\img\icons\unicons\cc-success.png" />
+    <Content Include="assets\img\icons\unicons\cc-warning.png" />
+    <Content Include="assets\img\icons\unicons\chart-success.png" />
+    <Content Include="assets\img\icons\unicons\chart.png" />
+    <Content Include="assets\img\icons\unicons\paypal.png" />
+    <Content Include="assets\img\icons\unicons\wallet-info.png" />
+    <Content Include="assets\img\icons\unicons\wallet.png" />
+    <Content Include="assets\img\illustrations\girl-doing-yoga-light.png" />
+    <Content Include="assets\img\illustrations\man-with-laptop-light.png" />
+    <Content Include="assets\img\illustrations\page-misc-error-light.png" />
+    <Content Include="assets\img\layouts\layout-container-light.png" />
+    <Content Include="assets\img\layouts\layout-fluid-light.png" />
+    <Content Include="assets\img\layouts\layout-without-menu-light.png" />
+    <Content Include="assets\img\layouts\layout-without-navbar-light.png" />
+    <Content Include="assets\js\config.js" />
+    <Content Include="assets\js\dashboards-analytics.js" />
+    <Content Include="assets\js\extended-ui-perfect-scrollbar.js" />
+    <Content Include="assets\js\form-basic-inputs.js" />
+    <Content Include="assets\js\main.js" />
+    <Content Include="assets\js\pages-account-settings-account.js" />
+    <Content Include="assets\js\ui-modals.js" />
+    <Content Include="assets\js\ui-popover.js" />
+    <Content Include="assets\js\ui-toasts.js" />
+    <Content Include="assets\vendor\css\core.css" />
+    <Content Include="assets\vendor\css\pages\page-account-settings.css" />
+    <Content Include="assets\vendor\css\pages\page-auth.css" />
+    <Content Include="assets\vendor\css\pages\page-icons.css" />
+    <Content Include="assets\vendor\css\pages\page-misc.css" />
+    <Content Include="assets\vendor\css\theme-default.css" />
+    <Content Include="assets\vendor\fonts\boxicons.css" />
+    <Content Include="assets\vendor\fonts\boxicons\boxicons.svg" />
+    <Content Include="assets\vendor\js\bootstrap.js" />
+    <Content Include="assets\vendor\js\helpers.js" />
+    <Content Include="assets\vendor\js\menu.js" />
+    <Content Include="assets\vendor\libs\apex-charts\apex-charts.css" />
+    <Content Include="assets\vendor\libs\apex-charts\apexcharts.js" />
+    <Content Include="assets\vendor\libs\highlight\highlight-github.css" />
+    <Content Include="assets\vendor\libs\highlight\highlight.css" />
+    <Content Include="assets\vendor\libs\highlight\highlight.js" />
+    <Content Include="assets\vendor\libs\jquery\jquery.js" />
+    <Content Include="assets\vendor\libs\masonry\masonry.js" />
+    <Content Include="assets\vendor\libs\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="assets\vendor\libs\perfect-scrollbar\perfect-scrollbar.js" />
+    <Content Include="assets\vendor\libs\popper\popper.js" />
+    <Content Include="bin\AjaxControlToolkit.dll" />
+    <Content Include="bin\Elmah.dll" />
+    <Content Include="bin\EPPlus.dll" />
+    <Content Include="bin\Google.Protobuf.dll" />
+    <Content Include="bin\itextsharp.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\PdfSharp.Charting.dll" />
+    <Content Include="bin\PdfSharp.dll" />
+    <Content Include="bin\RestSharp.dll" />
+    <Content Include="bootstrap4\css\bootstrap-grid.css" />
+    <Content Include="bootstrap4\css\bootstrap-grid.min.css" />
+    <Content Include="bootstrap4\css\bootstrap-reboot.css" />
+    <Content Include="bootstrap4\css\bootstrap-reboot.min.css" />
+    <Content Include="bootstrap4\css\bootstrap.css" />
+    <Content Include="bootstrap4\css\bootstrap.min.css" />
+    <Content Include="bootstrap4\js\bootstrap.bundle.js" />
+    <Content Include="bootstrap4\js\bootstrap.bundle.min.js" />
+    <Content Include="bootstrap4\js\bootstrap.js" />
+    <Content Include="bootstrap4\js\bootstrap.min.js" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Form\Administrasi\FrmAksesMenu.aspx" />
+    <Content Include="Form\Administrasi\FrmGroupMenu.aspx" />
+    <Content Include="Form\Administrasi\FrmListGroupMenu.aspx" />
+    <Content Include="Form\Administrasi\FrmListMenu.aspx" />
+    <Content Include="Form\Administrasi\FrmListUser.aspx" />
+    <Content Include="Form\Administrasi\FrmMenu.aspx" />
+    <Content Include="Form\Administrasi\FrmUser.aspx" />
+    <Content Include="Form\PensionMaintenance\AccrueFee.aspx" />
+    <Content Include="Form\PensionMaintenance\AdjustmentAcrueFee.aspx" />
+    <Content Include="Form\PensionMaintenance\AuditTrail.aspx" />
+    <Content Include="Form\PensionMaintenance\EndofDate.aspx" />
+    <Content Include="Form\PensionMaintenance\FillTempTable.aspx" />
+    <Content Include="Form\PensionMaintenance\SetupAgent.aspx" />
+    <Content Include="Form\PensionMaintenance\SetupAgentCommision.aspx" />
+    <Content Include="Form\PensionMaintenance\SetupBank.aspx" />
+    <Content Include="Form\PensionMaintenance\SetupPartner.aspx" />
+    <Content Include="Form\PensionMaintenance\UnitPrice.aspx" />
+    <Content Include="Form\PensionTransaction\AdminSuspense.aspx" />
+    <Content Include="Form\PensionTransaction\BillContribution.aspx" />
+    <Content Include="Form\PensionTransaction\CertificateChange.aspx" />
+    <Content Include="Form\PensionTransaction\CertificateMovement.aspx" />
+    <Content Include="Form\PensionTransaction\CertificateMovementByMoneyType.aspx" />
+    <Content Include="Form\PensionTransaction\DaftarNotifikasiClaimTransfer.aspx" />
+    <Content Include="Form\PensionTransaction\DeleteClaim.aspx" />
+    <Content Include="Form\PensionTransaction\DeleteSwitching.aspx" />
+    <Content Include="Form\PensionTransaction\DPLKRider.aspx" />
+    <Content Include="Form\PensionTransaction\EditingClaim.aspx" />
+    <Content Include="Form\PensionTransaction\EntryNotaBilling.aspx" />
+    <Content Include="Form\PensionTransaction\EntryPayrollContribution.aspx" />
+    <Content Include="Form\PensionTransaction\FundMovement.aspx" />
+    <Content Include="Form\PensionTransaction\FundMovement_MoneyType.aspx" />
+    <Content Include="Form\PensionTransaction\FundSwitchingRequestFundApproval.aspx" />
+    <Content Include="Form\PensionTransaction\JoinAccount.aspx" />
+    <Content Include="Form\PensionTransaction\MutationsFunds.aspx" />
+    <Content Include="Form\PensionTransaction\PaymentApproval.aspx" />
+    <Content Include="Form\PensionTransaction\PayoutSuspense.aspx" />
+    <Content Include="Form\PensionTransaction\PayoutSuspenseApproval.aspx" />
+    <Content Include="Form\PensionTransaction\PayoutSuspenseI.aspx" />
+    <Content Include="Form\PensionTransaction\PengantarKartuApproval.aspx" />
+    <Content Include="Form\PensionTransaction\ProccesClaimRequest.aspx" />
+    <Content Include="Form\PensionTransaction\ProccesClaimRequestReport.aspx" />
+    <Content Include="Form\PensionTransaction\SuratPengantarKartu.aspx" />
+    <Content Include="Form\PensionTransaction\UserControl\AdminSuspense\SuspenseApproval.ascx" />
+    <Content Include="Form\PensionTransaction\UserControl\AdminSuspense\SuspenseReport.ascx" />
+    <Content Include="Form\PensionTransaction\UserControl\AdminSuspense\SuspenseRequest.ascx" />
+    <Content Include="Form\PensionTransaction\UserControl\FundSwitching.ascx" />
+    <Content Include="Form\PensionTransaction\UserControl\FundSwitching_CertificateList.ascx" />
+    <Content Include="Form\PensionTransaction\UserControl\FundSwitching_GroupList.ascx" />
+    <Content Include="Form\PensionTransaction\UserControl\FundSwitching_GroupList_MoneyType.ascx" />
+    <Content Include="Form\PensionTransaction\UserControl\FundSwitching_MoneyType.ascx" />
+    <Content Include="Form\PensionTransaction\WithdrawEditing.aspx" />
+    <Content Include="Form\PensionTransaction\WithdrawEstimation.aspx" />
+    <Content Include="Form\PensionTransaction\WithdrawEstimationApproval.aspx" />
+    <Content Include="Form\PensionTransaction\WithdrawEstimationPPUPK.aspx" />
+    <Content Include="Form\PensionTransaction\WithdrawRequestFundApproval.aspx" />
+    <Content Include="Form\Pension\Benefit.aspx" />
+    <Content Include="Form\Pension\BillingStatus.aspx" />
+    <Content Include="Form\Pension\CertificateInfo.aspx" />
+    <Content Include="Form\Pension\ClaimHistorical.aspx" />
+    <Content Include="Form\Pension\Client.aspx" />
+    <Content Include="Form\Pension\ClientList.aspx" />
+    <Content Include="Form\Pension\Company.aspx" />
+    <Content Include="Form\Pension\CompanyEdit.aspx" />
+    <Content Include="Form\Pension\CompanyIndex.aspx" />
+    <Content Include="Form\Pension\FundInfo.aspx" />
+    <Content Include="Form\Pension\Group.aspx" />
+    <Content Include="Form\Pension\GroupCharge.aspx" />
+    <Content Include="Form\Pension\GroupList.aspx" />
+    <Content Include="Form\Pension\InvestmentDirection.aspx" />
+    <Content Include="Form\Pension\MemberClassPlan.aspx" />
+    <Content Include="Form\Pension\PayCenter.aspx" />
+    <Content Include="Form\Pension\PayCenterAdd.aspx" />
+    <Content Include="Form\Pension\PayCenterDelete.aspx" />
+    <Content Include="Form\Pension\PIC.aspx" />
+    <Content Include="Form\Pension\StatusSalary.aspx" />
+    <Content Include="Form\Pension\Transaction.aspx" />
+    <Content Include="Form\Pension\UserControl\ClientTabs\ClientCertificateInfo.ascx" />
+    <Content Include="Form\Pension\UserControl\ClientTabs\ClientClaimHistorical.ascx" />
+    <Content Include="Form\Pension\UserControl\ClientTabs\ClientFundInfo.ascx" />
+    <Content Include="Form\Pension\UserControl\ClientTabs\ClientTransaction.ascx" />
+    <Content Include="Form\Pension\UserControl\ClientTabs\StatusAndSalary.ascx" />
+    <Content Include="Form\Pension\UserControl\GroupTabs\GroupBenefit.ascx" />
+    <Content Include="Form\Pension\UserControl\GroupTabs\GroupBillingStatus.ascx" />
+    <Content Include="Form\Pension\UserControl\GroupTabs\GroupCharge.ascx" />
+    <Content Include="Form\Pension\UserControl\GroupTabs\GroupInvestmentDirection.ascx" />
+    <Content Include="Form\Pension\UserControl\GroupTabs\GroupMCP.ascx" />
+    <Content Include="Form\Pension\UserControl\GroupTabs\GroupPIC.ascx" />
+    <Content Include="Form\UserControl\SearchPanel.ascx" />
+    <Content Include="Images\add 48.png" />
+    <Content Include="Images\approved.png" />
+    <Content Include="Images\banner - Copy.png" />
+    <Content Include="Images\banner.png" />
+    <Content Include="Images\bggreen.jpg" />
+    <Content Include="Images\btnSimulate.png" />
+    <Content Include="Images\Button\1486713567_sms.png" />
+    <Content Include="Images\Button\Accept 48.png" />
+    <Content Include="Images\Button\Activation 24.png" />
+    <Content Include="Images\Button\Add 24.png" />
+    <Content Include="Images\Button\Add 32.png" />
+    <Content Include="Images\Button\Add 48.png" />
+    <Content Include="Images\Button\Add Payor 48.png" />
+    <Content Include="Images\Button\Add\Add 24.png" />
+    <Content Include="Images\Button\Add\Add 32.png" />
+    <Content Include="Images\Button\Add\Add 48.png" />
+    <Content Include="Images\Button\Add\Add Payor 48.png" />
+    <Content Include="Images\Button\Back 48.png" />
+    <Content Include="Images\Button\bukti penerimaan.png" />
+    <Content Include="Images\Button\Cancel 24.png" />
+    <Content Include="Images\Button\Cancel 48.png" />
+    <Content Include="Images\Button\Capture 48.png" />
+    <Content Include="Images\Button\Cash 24.png" />
+    <Content Include="Images\Button\Cash 32.png" />
+    <Content Include="Images\Button\check.png" />
+    <Content Include="Images\Button\CSV.png" />
+    <Content Include="Images\Button\Delete\Delete 24.png" />
+    <Content Include="Images\Button\Delete\Delete 32.png" />
+    <Content Include="Images\Button\Delete\Delete 48.png" />
+    <Content Include="Images\Button\Detail 16.png" />
+    <Content Include="Images\Button\Detail 24.png" />
+    <Content Include="Images\Button\Detail 32.png" />
+    <Content Include="Images\Button\document-security.png" />
+    <Content Include="Images\Button\DRPK_smartgift.png" />
+    <Content Include="Images\Button\e kuitansi pertama.png" />
+    <Content Include="Images\Button\e pengantar polis.png" />
+    <Content Include="Images\Button\e pernyataan transaksi.png" />
+    <Content Include="Images\Button\e polis.png" />
+    <Content Include="Images\Button\Edit\Edit 24.png" />
+    <Content Include="Images\Button\Edit\Edit 32.png" />
+    <Content Include="Images\Button\Edit\Edit 48.png" />
+    <Content Include="Images\Button\Edit\Edit2 24.png" />
+    <Content Include="Images\Button\eikhtisar.JPG" />
+    <Content Include="Images\Button\ekuitansi.JPG" />
+    <Content Include="Images\Button\Email 24.png" />
+    <Content Include="Images\Button\Email File.png" />
+    <Content Include="Images\Button\email.png" />
+    <Content Include="Images\Button\EndorsementTDM.png" />
+    <Content Include="Images\Button\epengantar.JPG" />
+    <Content Include="Images\Button\ePolicy.png" />
+    <Content Include="Images\Button\Excel 24.png" />
+    <Content Include="Images\Button\Excel 32.png" />
+    <Content Include="Images\Button\Excel 48.png" />
+    <Content Include="Images\Button\file-broken32.png" />
+    <Content Include="Images\Button\FPP.png" />
+    <Content Include="Images\Button\K.png" />
+    <Content Include="Images\Button\kelengkapan.png" />
+    <Content Include="Images\Button\kuitansi lanjutan.png" />
+    <Content Include="Images\Button\kuitansi pertama.png" />
+    <Content Include="Images\Button\kuitansi.png" />
+    <Content Include="Images\Button\lampiran_klaim.png" />
+    <Content Include="Images\Button\Login 48.png" />
+    <Content Include="Images\Button\Logout 48.png" />
+    <Content Include="Images\Button\manfaat.png" />
+    <Content Include="Images\Button\Medis 24.png" />
+    <Content Include="Images\Button\merge.png" />
+    <Content Include="Images\Button\no password.png" />
+    <Content Include="Images\Button\P.png" />
+    <Content Include="Images\Button\PDF 48.png" />
+    <Content Include="Images\Button\PDF\PDF 1.png" />
+    <Content Include="Images\Button\PDF\PDF 16.png" />
+    <Content Include="Images\Button\PDF\PDF 24.png" />
+    <Content Include="Images\Button\PDF\PDF 32.png" />
+    <Content Include="Images\Button\pengajuan_klaim.png" />
+    <Content Include="Images\Button\pengantar polis.png" />
+    <Content Include="Images\Button\pengantar.png" />
+    <Content Include="Images\Button\pernyataan transaksi.png" />
+    <Content Include="Images\Button\policy.png" />
+    <Content Include="Images\Button\polis.png" />
+    <Content Include="Images\Button\Preview File.png" />
+    <Content Include="Images\Button\print-icon %2816%29.png" />
+    <Content Include="Images\Button\printer blue 16.png" />
+    <Content Include="Images\Button\Print\Print 24.png" />
+    <Content Include="Images\Button\Print\Print 32.png" />
+    <Content Include="Images\Button\Print\Print 48.png" />
+    <Content Include="Images\Button\Print\Print2 24.png" />
+    <Content Include="Images\Button\process 48.png" />
+    <Content Include="Images\Button\Refresh\Refresh 24.png" />
+    <Content Include="Images\Button\Refresh\Refresh 32.png" />
+    <Content Include="Images\Button\Refresh\Refresh 48.png" />
+    <Content Include="Images\Button\riwayat_klaim.png" />
+    <Content Include="Images\Button\riwayat_premi.png" />
+    <Content Include="Images\Button\Save\Save 24.png" />
+    <Content Include="Images\Button\Save\Save 32.png" />
+    <Content Include="Images\Button\Save\Save 48.png" />
+    <Content Include="Images\Button\sc poliss.png" />
+    <Content Include="Images\Button\Search\Search 24.png" />
+    <Content Include="Images\Button\Search\Search 32.png" />
+    <Content Include="Images\Button\Search\Search 48.png" />
+    <Content Include="Images\Button\Send 48.png" />
+    <Content Include="Images\Button\treasury.JPG" />
+    <Content Include="Images\Button\TXT 48.png" />
+    <Content Include="Images\Button\Upload 64.png" />
+    <Content Include="Images\Button\Verify 48.png" />
+    <Content Include="Images\confirm.png" />
+    <Content Include="Images\Desain tanpa judul%285%29.png" />
+    <Content Include="Images\download-file.png" />
+    <Content Include="Images\email-icon-99.png" />
+    <Content Include="Images\export1.png" />
+    <Content Include="Images\GIF\Preloader_3.gif" />
+    <Content Include="Images\halo tm.png" />
+    <Content Include="Images\idea.png" />
+    <Content Include="Images\ILA - Copy.png" />
+    <Content Include="Images\ILA.png" />
+    <Content Include="Images\IMG_1341.JPG" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\MariBerasuransi.png" />
+    <Content Include="Images\OnlyTuguMandiri.png" />
+    <Content Include="Images\Preloader_3.gif" />
+    <Content Include="Images\preloading.gif" />
+    <Content Include="Images\sky.png" />
+    <Content Include="Images\Slide\arrows.png" />
+    <Content Include="Images\Slide\banne2.png" />
+    <Content Include="Images\Slide\banner2.png" />
+    <Content Include="Images\Slide\bggreen.jpg" />
+    <Content Include="Images\Slide\bullets.png" />
+    <Content Include="Images\Slide\guvenli-gelecek.jpg" />
+    <Content Include="Images\Slide\guvenli-gelecek.png" />
+    <Content Include="Images\Slide\lifeinsurance2.jpg" />
+    <Content Include="Images\Slide\lifeinsurance2.png" />
+    <Content Include="Images\Slide\loading.gif" />
+    <Content Include="Images\Slide\url.png" />
+    <Content Include="Images\stats.png" />
+    <Content Include="Images\tmandiri.png" />
+    <Content Include="Images\TTD.PNG" />
+    <Content Include="Images\ttdsabam.png" />
+    <Content Include="Images\tugu.png" />
+    <Content Include="Images\tugu75.png" />
+    <Content Include="Images\tugublur.png" />
+    <Content Include="Images\TuguMandiri.png" />
+    <Content Include="Images\widodo png.png" />
+    <Content Include="Login.aspx" />
+    <Content Include="Pension.aspx" />
+    <Content Include="Scripts\apicontrol.js" />
+    <Content Include="Scripts\bootstrap-switch.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\email.js" />
+    <Content Include="Scripts\dukcapil.js" />
+    <Content Include="Scripts\fancybox\blank.gif" />
+    <Content Include="Scripts\fancybox\fancybox-x.png" />
+    <Content Include="Scripts\fancybox\fancybox-y.png" />
+    <Content Include="Scripts\fancybox\fancybox.png" />
+    <Content Include="Scripts\fancybox\fancy_close.png" />
+    <Content Include="Scripts\fancybox\fancy_loading.png" />
+    <Content Include="Scripts\fancybox\fancy_nav_left.png" />
+    <Content Include="Scripts\fancybox\fancy_nav_right.png" />
+    <Content Include="Scripts\fancybox\fancy_shadow_e.png" />
+    <Content Include="Scripts\fancybox\fancy_shadow_n.png" />
+    <Content Include="Scripts\fancybox\fancy_shadow_ne.png" />
+    <Content Include="Scripts\fancybox\fancy_shadow_nw.png" />
+    <Content Include="Scripts\fancybox\fancy_shadow_s.png" />
+    <Content Include="Scripts\fancybox\fancy_shadow_se.png" />
+    <Content Include="Scripts\fancybox\fancy_shadow_sw.png" />
+    <Content Include="Scripts\fancybox\fancy_shadow_w.png" />
+    <Content Include="Scripts\fancybox\fancy_title_left.png" />
+    <Content Include="Scripts\fancybox\fancy_title_main.png" />
+    <Content Include="Scripts\fancybox\fancy_title_over.png" />
+    <Content Include="Scripts\fancybox\fancy_title_right.png" />
+    <Content Include="Scripts\fancybox\jquery.easing-1.3.pack.js" />
+    <Content Include="Scripts\fancybox\jquery.fancybox-1.3.4.css" />
+    <Content Include="Scripts\fancybox\jquery.fancybox-1.3.4.js" />
+    <Content Include="Scripts\fancybox\jquery.fancybox-1.3.4.pack.js" />
+    <Content Include="Scripts\fancybox\jquery.mousewheel-3.0.4.pack.js" />
+    <Content Include="assets\vendor\fonts\boxicons\boxicons.eot" />
+    <Content Include="assets\vendor\fonts\boxicons\boxicons.ttf" />
+    <Content Include="assets\vendor\fonts\boxicons\boxicons.woff" />
+    <Content Include="assets\vendor\fonts\boxicons\boxicons.woff2" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-1.11.2.min.js" />
+    <Content Include="Scripts\jquery-1.8.3.js" />
+    <Content Include="Scripts\jquery-1.8.3.min.js" />
+    <Content Include="Scripts\jquery-1.9.0.min.js" />
+    <Content Include="Scripts\jquery-ui-1.10.3.custom.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery.mask.js" />
+    <Content Include="bootstrap4\css\.DS_Store" />
+    <Content Include="bootstrap4\css\bootstrap-grid.css.map" />
+    <Content Include="bootstrap4\css\bootstrap-grid.min.css.map" />
+    <Content Include="bootstrap4\css\bootstrap-reboot.css.map" />
+    <Content Include="bootstrap4\css\bootstrap-reboot.min.css.map" />
+    <Content Include="bootstrap4\css\bootstrap.css.map" />
+    <Content Include="bootstrap4\css\bootstrap.min.css.map" />
+    <Content Include="bootstrap4\js\bootstrap.bundle.js.map" />
+    <Content Include="bootstrap4\js\bootstrap.bundle.min.js.map" />
+    <Content Include="bootstrap4\js\bootstrap.js.map" />
+    <Content Include="bootstrap4\js\bootstrap.min.js.map" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\LocalIrfan.pubxml" />
+    <None Include="Properties\PublishProfiles\LokalFerdy.pubxml" />
+    <None Include="Properties\PublishProfiles\repository2.pubxml" />
+    <None Include="Properties\PublishProfiles\repositoryasper2.pubxml" />
+    <None Include="Properties\PublishProfiles\UAT.pubxml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <None Include="Scripts\jquery.maskedinput.js" />
+    <Content Include="Scripts\jquery.maskedinput.min.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.nivo.slider.js" />
+    <Content Include="Scripts\jquery.sticky.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\select2.js" />
+    <Content Include="Scripts\select2.min.js" />
+    <Content Include="Scripts\ui\jquery-ui.custom.js" />
+    <Content Include="Scripts\ui\jquery.ui.accordion.js" />
+    <Content Include="Scripts\ui\jquery.ui.autocomplete.js" />
+    <Content Include="Scripts\ui\jquery.ui.button.js" />
+    <Content Include="Scripts\ui\jquery.ui.core.js" />
+    <Content Include="Scripts\ui\jquery.ui.datepicker.js" />
+    <Content Include="Scripts\ui\jquery.ui.dialog.js" />
+    <Content Include="Scripts\ui\jquery.ui.draggable.js" />
+    <Content Include="Scripts\ui\jquery.ui.droppable.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-blind.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-bounce.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-clip.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-drop.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-explode.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-fade.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-fold.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-highlight.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-pulsate.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-scale.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-shake.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-slide.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect-transfer.js" />
+    <Content Include="Scripts\ui\jquery.ui.effect.js" />
+    <Content Include="Scripts\ui\jquery.ui.menu.js" />
+    <Content Include="Scripts\ui\jquery.ui.mouse.js" />
+    <Content Include="Scripts\ui\jquery.ui.position.js" />
+    <Content Include="Scripts\ui\jquery.ui.progressbar.js" />
+    <Content Include="Scripts\ui\jquery.ui.resizable.js" />
+    <Content Include="Scripts\ui\jquery.ui.selectable.js" />
+    <Content Include="Scripts\ui\jquery.ui.slider.js" />
+    <Content Include="Scripts\ui\jquery.ui.sortable.js" />
+    <Content Include="Scripts\ui\jquery.ui.spinner.js" />
+    <Content Include="Scripts\ui\jquery.ui.tabs.js" />
+    <Content Include="Scripts\ui\jquery.ui.tooltip.js" />
+    <Content Include="Scripts\ui\jquery.ui.widget.js" />
+    <Content Include="Scripts\ui\minified\jquery-ui.custom.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.accordion.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.autocomplete.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.button.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.core.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.datepicker.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.dialog.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.draggable.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.droppable.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.effect-blind.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.effect-bounce.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.effect-clip.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.effect-drop.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.effect-explode.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.effect-fade.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.effect-fold.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.effect-highlight.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.effect-pulsate.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.effect-scale.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.effect-shake.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.effect-slide.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.effect-transfer.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.effect.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.menu.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.mouse.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.position.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.progressbar.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.resizable.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.selectable.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.slider.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.sortable.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.spinner.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.tabs.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.tooltip.min.js" />
+    <Content Include="Scripts\ui\minified\jquery.ui.widget.min.js" />
+    <Content Include="Scripts\bootstrap-switch.js" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="SiteBu.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Class\ActionDef.cs" />
+    <Compile Include="Class\AppMessage.cs" />
+    <Compile Include="Class\ConvertJsonStringToDataTable.cs" />
+    <Compile Include="Class\DateFunction.cs" />
+    <Compile Include="Class\JavaScript.cs" />
+    <Compile Include="Class\NumberUtils.cs" />
+    <Compile Include="Class\Query.cs" />
+    <Compile Include="Class\References.cs" />
+    <Compile Include="Class\ReportDef.cs" />
+    <Compile Include="Class\ReportUtility.cs" />
+    <Compile Include="Class\SessionDef.cs" />
+    <Compile Include="Class\Utility.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EncryptDecryptWebConfig.cs" />
+    <Compile Include="Form\Administrasi\FrmAksesMenu.aspx.cs">
+      <DependentUpon>FrmAksesMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Administrasi\FrmAksesMenu.aspx.designer.cs">
+      <DependentUpon>FrmAksesMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Administrasi\FrmGroupMenu.aspx.cs">
+      <DependentUpon>FrmGroupMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Administrasi\FrmGroupMenu.aspx.designer.cs">
+      <DependentUpon>FrmGroupMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Administrasi\FrmListGroupMenu.aspx.cs">
+      <DependentUpon>FrmListGroupMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Administrasi\FrmListGroupMenu.aspx.designer.cs">
+      <DependentUpon>FrmListGroupMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Administrasi\FrmListMenu.aspx.cs">
+      <DependentUpon>FrmListMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Administrasi\FrmListMenu.aspx.designer.cs">
+      <DependentUpon>FrmListMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Administrasi\FrmListUser.aspx.cs">
+      <DependentUpon>FrmListUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Administrasi\FrmListUser.aspx.designer.cs">
+      <DependentUpon>FrmListUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Administrasi\FrmMenu.aspx.cs">
+      <DependentUpon>FrmMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Administrasi\FrmMenu.aspx.designer.cs">
+      <DependentUpon>FrmMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Administrasi\FrmUser.aspx.cs">
+      <DependentUpon>FrmUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Administrasi\FrmUser.aspx.designer.cs">
+      <DependentUpon>FrmUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionMaintenance\AccrueFee.aspx.cs">
+      <DependentUpon>AccrueFee.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionMaintenance\AccrueFee.aspx.designer.cs">
+      <DependentUpon>AccrueFee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionMaintenance\AdjustmentAcrueFee.aspx.cs">
+      <DependentUpon>AdjustmentAcrueFee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionMaintenance\AdjustmentAcrueFee.aspx.designer.cs">
+      <DependentUpon>AdjustmentAcrueFee.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionMaintenance\AuditTrail.aspx.cs">
+      <DependentUpon>AuditTrail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionMaintenance\AuditTrail.aspx.designer.cs">
+      <DependentUpon>AuditTrail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionMaintenance\EndofDate.aspx.cs">
+      <DependentUpon>EndofDate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionMaintenance\EndofDate.aspx.designer.cs">
+      <DependentUpon>EndofDate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionMaintenance\FillTempTable.aspx.cs">
+      <DependentUpon>FillTempTable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionMaintenance\FillTempTable.aspx.designer.cs">
+      <DependentUpon>FillTempTable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionMaintenance\SetupAgent.aspx.cs">
+      <DependentUpon>SetupAgent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionMaintenance\SetupAgent.aspx.designer.cs">
+      <DependentUpon>SetupAgent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionMaintenance\SetupAgentCommision.aspx.cs">
+      <DependentUpon>SetupAgentCommision.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionMaintenance\SetupAgentCommision.aspx.designer.cs">
+      <DependentUpon>SetupAgentCommision.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionMaintenance\SetupBank.aspx.cs">
+      <DependentUpon>SetupBank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionMaintenance\SetupBank.aspx.designer.cs">
+      <DependentUpon>SetupBank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionMaintenance\SetupPartner.aspx.cs">
+      <DependentUpon>SetupPartner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionMaintenance\SetupPartner.aspx.designer.cs">
+      <DependentUpon>SetupPartner.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionMaintenance\UnitPrice.aspx.cs">
+      <DependentUpon>UnitPrice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionMaintenance\UnitPrice.aspx.designer.cs">
+      <DependentUpon>UnitPrice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\AdminSuspense.aspx.cs">
+      <DependentUpon>AdminSuspense.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\AdminSuspense.aspx.designer.cs">
+      <DependentUpon>AdminSuspense.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\BillContribution.aspx.cs">
+      <DependentUpon>BillContribution.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\BillContribution.aspx.designer.cs">
+      <DependentUpon>BillContribution.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\CertificateChange.aspx.cs">
+      <DependentUpon>CertificateChange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\CertificateChange.aspx.designer.cs">
+      <DependentUpon>CertificateChange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\CertificateMovement.aspx.cs">
+      <DependentUpon>CertificateMovement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\CertificateMovement.aspx.designer.cs">
+      <DependentUpon>CertificateMovement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\CertificateMovementByMoneyType.aspx.cs">
+      <DependentUpon>CertificateMovementByMoneyType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\CertificateMovementByMoneyType.aspx.designer.cs">
+      <DependentUpon>CertificateMovementByMoneyType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\DaftarNotifikasiClaimTransfer.aspx.cs">
+      <DependentUpon>DaftarNotifikasiClaimTransfer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\DaftarNotifikasiClaimTransfer.aspx.designer.cs">
+      <DependentUpon>DaftarNotifikasiClaimTransfer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\DeleteClaim.aspx.cs">
+      <DependentUpon>DeleteClaim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\DeleteClaim.aspx.designer.cs">
+      <DependentUpon>DeleteClaim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\DeleteSwitching.aspx.cs">
+      <DependentUpon>DeleteSwitching.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\DeleteSwitching.aspx.designer.cs">
+      <DependentUpon>DeleteSwitching.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\DPLKRider.aspx.cs">
+      <DependentUpon>DPLKRider.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\DPLKRider.aspx.designer.cs">
+      <DependentUpon>DPLKRider.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\EditingClaim.aspx.cs">
+      <DependentUpon>EditingClaim.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\EditingClaim.aspx.designer.cs">
+      <DependentUpon>EditingClaim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\EntryNotaBilling.aspx.cs">
+      <DependentUpon>EntryNotaBilling.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\EntryNotaBilling.aspx.designer.cs">
+      <DependentUpon>EntryNotaBilling.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\EntryPayrollContribution.aspx.cs">
+      <DependentUpon>EntryPayrollContribution.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\EntryPayrollContribution.aspx.designer.cs">
+      <DependentUpon>EntryPayrollContribution.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\FundMovement.aspx.cs">
+      <DependentUpon>FundMovement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\FundMovement.aspx.designer.cs">
+      <DependentUpon>FundMovement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\FundMovement_MoneyType.aspx.cs">
+      <DependentUpon>FundMovement_MoneyType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\FundMovement_MoneyType.aspx.designer.cs">
+      <DependentUpon>FundMovement_MoneyType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\FundSwitchingRequestFundApproval.aspx.cs">
+      <DependentUpon>FundSwitchingRequestFundApproval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\FundSwitchingRequestFundApproval.aspx.designer.cs">
+      <DependentUpon>FundSwitchingRequestFundApproval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\JoinAccount.aspx.cs">
+      <DependentUpon>JoinAccount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\JoinAccount.aspx.designer.cs">
+      <DependentUpon>JoinAccount.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\MutationsFunds.aspx.cs">
+      <DependentUpon>MutationsFunds.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\MutationsFunds.aspx.designer.cs">
+      <DependentUpon>MutationsFunds.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\PaymentApproval.aspx.cs">
+      <DependentUpon>PaymentApproval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\PaymentApproval.aspx.designer.cs">
+      <DependentUpon>PaymentApproval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\PayoutSuspense.aspx.cs">
+      <DependentUpon>PayoutSuspense.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\PayoutSuspense.aspx.designer.cs">
+      <DependentUpon>PayoutSuspense.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\PayoutSuspenseApproval.aspx.cs">
+      <DependentUpon>PayoutSuspenseApproval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\PayoutSuspenseApproval.aspx.designer.cs">
+      <DependentUpon>PayoutSuspenseApproval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\PayoutSuspenseI.aspx.cs">
+      <DependentUpon>PayoutSuspenseI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\PayoutSuspenseI.aspx.designer.cs">
+      <DependentUpon>PayoutSuspenseI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\PengantarKartuApproval.aspx.cs">
+      <DependentUpon>PengantarKartuApproval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\PengantarKartuApproval.aspx.designer.cs">
+      <DependentUpon>PengantarKartuApproval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\ProccesClaimRequest.aspx.cs">
+      <DependentUpon>ProccesClaimRequest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\ProccesClaimRequest.aspx.designer.cs">
+      <DependentUpon>ProccesClaimRequest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\ProccesClaimRequestReport.aspx.cs">
+      <DependentUpon>ProccesClaimRequestReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\ProccesClaimRequestReport.aspx.designer.cs">
+      <DependentUpon>ProccesClaimRequestReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\SuratPengantarKartu.aspx.cs">
+      <DependentUpon>SuratPengantarKartu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\SuratPengantarKartu.aspx.designer.cs">
+      <DependentUpon>SuratPengantarKartu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\UserControl\AdminSuspense\SuspenseApproval.ascx.cs">
+      <DependentUpon>SuspenseApproval.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\UserControl\AdminSuspense\SuspenseApproval.ascx.designer.cs">
+      <DependentUpon>SuspenseApproval.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\UserControl\AdminSuspense\SuspenseReport.ascx.cs">
+      <DependentUpon>SuspenseReport.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\UserControl\AdminSuspense\SuspenseReport.ascx.designer.cs">
+      <DependentUpon>SuspenseReport.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\UserControl\AdminSuspense\SuspenseRequest.ascx.cs">
+      <DependentUpon>SuspenseRequest.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\UserControl\AdminSuspense\SuspenseRequest.ascx.designer.cs">
+      <DependentUpon>SuspenseRequest.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\UserControl\FundSwitching.ascx.cs">
+      <DependentUpon>FundSwitching.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\UserControl\FundSwitching.ascx.designer.cs">
+      <DependentUpon>FundSwitching.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\UserControl\FundSwitching_CertificateList.ascx.cs">
+      <DependentUpon>FundSwitching_CertificateList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\UserControl\FundSwitching_CertificateList.ascx.designer.cs">
+      <DependentUpon>FundSwitching_CertificateList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\UserControl\FundSwitching_GroupList.ascx.cs">
+      <DependentUpon>FundSwitching_GroupList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\UserControl\FundSwitching_GroupList.ascx.designer.cs">
+      <DependentUpon>FundSwitching_GroupList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\UserControl\FundSwitching_GroupList_MoneyType.ascx.cs">
+      <DependentUpon>FundSwitching_GroupList_MoneyType.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\UserControl\FundSwitching_GroupList_MoneyType.ascx.designer.cs">
+      <DependentUpon>FundSwitching_GroupList_MoneyType.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\UserControl\FundSwitching_MoneyType.ascx.cs">
+      <DependentUpon>FundSwitching_MoneyType.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\UserControl\FundSwitching_MoneyType.ascx.designer.cs">
+      <DependentUpon>FundSwitching_MoneyType.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\WithdrawEditing.aspx.cs">
+      <DependentUpon>WithdrawEditing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\WithdrawEditing.aspx.designer.cs">
+      <DependentUpon>WithdrawEditing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\WithdrawEstimation.aspx.cs">
+      <DependentUpon>WithdrawEstimation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\WithdrawEstimation.aspx.designer.cs">
+      <DependentUpon>WithdrawEstimation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\WithdrawEstimationApproval.aspx.cs">
+      <DependentUpon>WithdrawEstimationApproval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\WithdrawEstimationApproval.aspx.designer.cs">
+      <DependentUpon>WithdrawEstimationApproval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\WithdrawEstimationPPUPK.aspx.cs">
+      <DependentUpon>WithdrawEstimationPPUPK.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\WithdrawEstimationPPUPK.aspx.designer.cs">
+      <DependentUpon>WithdrawEstimationPPUPK.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\WithdrawRequestFundApproval.aspx.cs">
+      <DependentUpon>WithdrawRequestFundApproval.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\PensionTransaction\WithdrawRequestFundApproval.aspx.designer.cs">
+      <DependentUpon>WithdrawRequestFundApproval.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pension\Benefit.aspx.cs">
+      <DependentUpon>Benefit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Pension\Benefit.aspx.designer.cs">
+      <DependentUpon>Benefit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pension\BillingStatus.aspx.cs">
+      <DependentUpon>BillingStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Pension\BillingStatus.aspx.designer.cs">
+      <DependentUpon>BillingStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pension\CertificateInfo.aspx.cs">
+      <DependentUpon>CertificateInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Pension\CertificateInfo.aspx.designer.cs">
+      <DependentUpon>CertificateInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pension\ClaimHistorical.aspx.cs">
+      <DependentUpon>ClaimHistorical.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Pension\ClaimHistorical.aspx.designer.cs">
+      <DependentUpon>ClaimHistorical.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pension\Client.aspx.cs">
+      <DependentUpon>Client.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Pension\Client.aspx.designer.cs">
+      <DependentUpon>Client.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pension\ClientList.aspx.cs">
+      <DependentUpon>ClientList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Pension\ClientList.aspx.designer.cs">
+      <DependentUpon>ClientList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pension\Company.aspx.cs">
+      <DependentUpon>Company.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Pension\Company.aspx.designer.cs">
+      <DependentUpon>Company.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pension\CompanyEdit.aspx.cs">
+      <DependentUpon>CompanyEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Pension\CompanyEdit.aspx.designer.cs">
+      <DependentUpon>CompanyEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pension\CompanyIndex.aspx.cs">
+      <DependentUpon>CompanyIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Pension\CompanyIndex.aspx.designer.cs">
+      <DependentUpon>CompanyIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pension\FundInfo.aspx.cs">
+      <DependentUpon>FundInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Pension\FundInfo.aspx.designer.cs">
+      <DependentUpon>FundInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pension\Group.aspx.cs">
+      <DependentUpon>Group.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Pension\Group.aspx.designer.cs">
+      <DependentUpon>Group.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pension\GroupCharge.aspx.cs">
+      <DependentUpon>GroupCharge.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Pension\GroupCharge.aspx.designer.cs">
+      <DependentUpon>GroupCharge.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pension\GroupList.aspx.cs">
+      <DependentUpon>GroupList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Pension\GroupList.aspx.designer.cs">
+      <DependentUpon>GroupList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pension\InvestmentDirection.aspx.cs">
+      <DependentUpon>InvestmentDirection.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Pension\InvestmentDirection.aspx.designer.cs">
+      <DependentUpon>InvestmentDirection.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pension\MemberClassPlan.aspx.cs">
+      <DependentUpon>MemberClassPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Pension\MemberClassPlan.aspx.designer.cs">
+      <DependentUpon>MemberClassPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pension\PayCenter.aspx.cs">
+      <DependentUpon>PayCenter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Pension\PayCenter.aspx.designer.cs">
+      <DependentUpon>PayCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pension\PayCenterAdd.aspx.cs">
+      <DependentUpon>PayCenterAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Pension\PayCenterAdd.aspx.designer.cs">
+      <DependentUpon>PayCenterAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pension\PayCenterDelete.aspx.cs">
+      <DependentUpon>PayCenterDelete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Pension\PayCenterDelete.aspx.designer.cs">
+      <DependentUpon>PayCenterDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pension\PIC.aspx.cs">
+      <DependentUpon>PIC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Pension\PIC.aspx.designer.cs">
+      <DependentUpon>PIC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pension\StatusSalary.aspx.cs">
+      <DependentUpon>StatusSalary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Pension\StatusSalary.aspx.designer.cs">
+      <DependentUpon>StatusSalary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pension\Transaction.aspx.cs">
+      <DependentUpon>Transaction.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Pension\Transaction.aspx.designer.cs">
+      <DependentUpon>Transaction.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pension\UserControl\ClientTabs\ClientCertificateInfo.ascx.cs">
+      <DependentUpon>ClientCertificateInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Pension\UserControl\ClientTabs\ClientCertificateInfo.ascx.designer.cs">
+      <DependentUpon>ClientCertificateInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pension\UserControl\ClientTabs\ClientClaimHistorical.ascx.cs">
+      <DependentUpon>ClientClaimHistorical.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Pension\UserControl\ClientTabs\ClientClaimHistorical.ascx.designer.cs">
+      <DependentUpon>ClientClaimHistorical.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pension\UserControl\ClientTabs\ClientFundInfo.ascx.cs">
+      <DependentUpon>ClientFundInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Pension\UserControl\ClientTabs\ClientFundInfo.ascx.designer.cs">
+      <DependentUpon>ClientFundInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pension\UserControl\ClientTabs\ClientTransaction.ascx.cs">
+      <DependentUpon>ClientTransaction.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Pension\UserControl\ClientTabs\ClientTransaction.ascx.designer.cs">
+      <DependentUpon>ClientTransaction.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pension\UserControl\ClientTabs\StatusAndSalary.ascx.cs">
+      <DependentUpon>StatusAndSalary.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Pension\UserControl\ClientTabs\StatusAndSalary.ascx.designer.cs">
+      <DependentUpon>StatusAndSalary.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pension\UserControl\GroupTabs\GroupBenefit.ascx.cs">
+      <DependentUpon>GroupBenefit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Pension\UserControl\GroupTabs\GroupBenefit.ascx.designer.cs">
+      <DependentUpon>GroupBenefit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pension\UserControl\GroupTabs\GroupBillingStatus.ascx.cs">
+      <DependentUpon>GroupBillingStatus.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Pension\UserControl\GroupTabs\GroupBillingStatus.ascx.designer.cs">
+      <DependentUpon>GroupBillingStatus.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pension\UserControl\GroupTabs\GroupCharge.ascx.cs">
+      <DependentUpon>GroupCharge.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Pension\UserControl\GroupTabs\GroupCharge.ascx.designer.cs">
+      <DependentUpon>GroupCharge.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pension\UserControl\GroupTabs\GroupInvestmentDirection.ascx.cs">
+      <DependentUpon>GroupInvestmentDirection.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Pension\UserControl\GroupTabs\GroupInvestmentDirection.ascx.designer.cs">
+      <DependentUpon>GroupInvestmentDirection.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pension\UserControl\GroupTabs\GroupMCP.ascx.cs">
+      <DependentUpon>GroupMCP.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Pension\UserControl\GroupTabs\GroupMCP.ascx.designer.cs">
+      <DependentUpon>GroupMCP.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\Pension\UserControl\GroupTabs\GroupPIC.ascx.cs">
+      <DependentUpon>GroupPIC.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\Pension\UserControl\GroupTabs\GroupPIC.ascx.designer.cs">
+      <DependentUpon>GroupPIC.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Form\UserControl\SearchPanel.ascx.cs">
+      <DependentUpon>SearchPanel.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Form\UserControl\SearchPanel.ascx.designer.cs">
+      <DependentUpon>SearchPanel.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Framework\AssetManager.cs" />
+    <Compile Include="Framework\Auth.cs" />
+    <Compile Include="Framework\Connection.cs" />
+    <Compile Include="Framework\Database.cs" />
+    <Compile Include="Framework\DatabaseMySql.cs" />
+    <Compile Include="Framework\DatabaseOledb.cs" />
+    <Compile Include="Framework\Helper\ControlHelper.cs" />
+    <Compile Include="Framework\Helper\TabHelper.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Logic\Administrasi\AksesMenu.cs" />
+    <Compile Include="Logic\Administrasi\GroupMenu.cs" />
+    <Compile Include="Logic\Administrasi\Menu.cs" />
+    <Compile Include="Logic\Administrasi\User.cs" />
+    <Compile Include="Logic\Pension\AdminSuspenseModels.cs" />
+    <Compile Include="Logic\Pension\BenefitGroup.cs" />
+    <Compile Include="Logic\Pension\BillContributionModels.cs" />
+    <Compile Include="Logic\Pension\BillingStatusModels.cs" />
+    <Compile Include="Logic\Pension\BusinessLine.cs" />
+    <Compile Include="Logic\Pension\BusinessSctr.cs" />
+    <Compile Include="Logic\Pension\CertificateChangeModels.cs" />
+    <Compile Include="Logic\Pension\CertificateInfoModels.cs" />
+    <Compile Include="Logic\Pension\CertificateMovementModels.cs" />
+    <Compile Include="Logic\Pension\CertificateTransactions.cs" />
+    <Compile Include="Logic\Pension\ClientClaimHistoricalModels.cs" />
+    <Compile Include="Logic\Pension\ClientFundModels.cs" />
+    <Compile Include="Logic\Pension\ClientInfoModels.cs" />
+    <Compile Include="Logic\Pension\ClientTransactionModels.cs" />
+    <Compile Include="Logic\Pension\CompanyModel.cs" />
+    <Compile Include="Logic\Pension\DbBank.cs" />
+    <Compile Include="Logic\Pension\DDL.cs" />
+    <Compile Include="Logic\Pension\DDLAdminSuspense.cs" />
+    <Compile Include="Logic\Pension\DDLBillingContribution.cs" />
+    <Compile Include="Logic\Pension\DDLCertificateMovement.cs" />
+    <Compile Include="Logic\Pension\DDLClient.cs" />
+    <Compile Include="Logic\Pension\DDLFundSwitching.cs" />
+    <Compile Include="Logic\Pension\DDLGroup.cs" />
+    <Compile Include="Logic\Pension\DDLMasterPaycenter.cs" />
+    <Compile Include="Logic\Pension\DDLPaycenter.cs" />
+    <Compile Include="Logic\Pension\DDLPayoutSuspense.cs" />
+    <Compile Include="Logic\Pension\DeleteClaimModels.cs" />
+    <Compile Include="Logic\Pension\DeleteSwitchingModels.cs" />
+    <Compile Include="Logic\Pension\EditingClaimModels.cs" />
+    <Compile Include="Logic\Pension\EntryNotaBillingModels.cs" />
+    <Compile Include="Logic\Pension\EntryPayrollContributionModels.cs" />
+    <Compile Include="Logic\Pension\FSCertificateListModels.cs" />
+    <Compile Include="Logic\Pension\FSGroupListModels.cs" />
+    <Compile Include="Logic\Pension\FundInfo.cs" />
+    <Compile Include="Logic\Pension\FundSwitchingModels.cs" />
+    <Compile Include="Logic\Pension\FundSwitchingRequestFundApprovalModels.cs" />
+    <Compile Include="Logic\Pension\GroupChargeModels.cs" />
+    <Compile Include="Logic\Pension\GroupInfoModels.cs" />
+    <Compile Include="Logic\Pension\GroupPICModels.cs" />
+    <Compile Include="Logic\Pension\InvestmentDirectionModels.cs" />
+    <Compile Include="Logic\Pension\JoinAccountModels.cs" />
+    <Compile Include="Logic\Pension\MemberClassPlanModels.cs" />
+    <Compile Include="Logic\Pension\MutationFund.cs" />
+    <Compile Include="Logic\Pension\PaycenterModel.cs" />
+    <Compile Include="Logic\Pension\PaymentAfterApproveModels.cs" />
+    <Compile Include="Logic\Pension\PaymentApprovalModels.cs" />
+    <Compile Include="Logic\Pension\PayoutSuspenseApprovalModels.cs" />
+    <Compile Include="Logic\Pension\PayoutSuspenseModels.cs" />
+    <Compile Include="Logic\Pension\PengantarKartuApproval.cs" />
+    <Compile Include="Logic\Pension\ProductSetupModels.cs" />
+    <Compile Include="Logic\Pension\ProsesClaimRequest.cs" />
+    <Compile Include="Logic\Pension\StatusAndSalaryModels.cs" />
+    <Compile Include="Logic\Pension\SuratPengantarKartuModels.cs" />
+    <Compile Include="Logic\Pension\SuspenseApprovalModels.cs" />
+    <Compile Include="Logic\Pension\SuspenseReportModels.cs" />
+    <Compile Include="Logic\Pension\WithdrawEditingModels.cs" />
+    <Compile Include="Logic\Pension\WithdrawEstimation.cs" />
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pension.aspx.cs">
+      <DependentUpon>Pension.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pension.aspx.designer.cs">
+      <DependentUpon>Pension.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SiteBu.Master.cs">
+      <DependentUpon>SiteBu.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SiteBu.Master.designer.cs">
+      <DependentUpon>SiteBu.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="bin\de\" />
+    <Folder Include="bin\Report\" />
+    <Folder Include="Images\Icon\" />
+    <Folder Include="Upload\" />
+    <Folder Include="Views\AddressType\" />
+    <Folder Include="Views\AppStatusType\" />
+    <Folder Include="Views\AuditTrail\" />
+    <Folder Include="Views\BeneRelationType\" />
+    <Folder Include="Views\IdType\" />
+    <Folder Include="Views\InvType\" />
+    <Folder Include="Views\JobLvlType\" />
+    <Folder Include="Views\JobVctnType\" />
+    <Folder Include="Views\MailAddrType\" />
+    <Folder Include="Views\Province\" />
+    <Folder Include="Views\SecType\" />
+    <Folder Include="Views\SecurityType\" />
+    <Folder Include="Views\SetupPartner\" />
+    <Folder Include="Views\UnitPrice\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Properties\PublishProfiles\Lokal.pubxml" />
+    <None Include="Properties\PublishProfiles\NBGuntur.pubxml" />
+    <None Include="Properties\PublishProfiles\repository.pubxml" />
+    <None Include="Properties\PublishProfiles\Server.pubxml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51425</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51425/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
